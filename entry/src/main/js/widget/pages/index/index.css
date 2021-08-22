@@ -14,7 +14,11 @@
 }
 
 .items_container {/* show in 2X2,2X4,4X4 */
+/*适用于div等支持flex布局的容器组件中的子组件上，当容器组件在flex主轴上尺寸不足以显示全部内容时，
+    按照display-index值从小到大的顺序进行隐藏，具有相同display-index值的组件同时隐藏，缺省值为Infinity，表示不隐藏*/
     display-index: 1;
+/*指明当前元素在flex主轴方向上尺寸权值，当且仅当容器组件中所有节点均设置此属性时生效。
+    （容器主轴尺寸*当前权值）/ 所有子元素权值和*/
     flex-weight: 20;
     min-height: 148px;
 }
