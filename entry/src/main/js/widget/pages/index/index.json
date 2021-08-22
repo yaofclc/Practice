@@ -1,0 +1,23 @@
+{
+  "data": {
+    "time": "10:50",
+    "date": "Sunday, June 06",
+    "temperature": 19,
+    "city": "Hangzhou"
+  },
+  "actions": {
+    "routerToApp": {
+      "action": "router",
+      "abilityName": "com.yaofclc.jsformdemo.MainAbility",
+      "params": {
+        "message": "jump"
+      }
+    },
+    "changeCity": {
+      "action": "message",
+      "params": {
+        "message": "change city"
+      }
+    }
+  }
+}
