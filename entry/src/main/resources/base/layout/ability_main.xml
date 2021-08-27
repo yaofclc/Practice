@@ -6,13 +6,33 @@
     ohos:alignment="center"
     ohos:orientation="vertical">
 
-    <Text
-        ohos:id="$+id:text_helloworld"
+    <Button
+        ohos:id="$+id:btn_insert"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:background_element="$graphic:background_ability_main"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="$string:mainability_HelloWorld"
+        ohos:text="插入"
+        ohos:text_size="40vp"
+        />
+
+    <Button
+        ohos:id="$+id:btn_query"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="查询"
+        ohos:text_size="40vp"
+        />
+
+    <Button
+        ohos:id="$+id:btn_delete"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="删除"
         ohos:text_size="40vp"
         />
 
