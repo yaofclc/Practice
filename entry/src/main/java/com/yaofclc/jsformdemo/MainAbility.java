@@ -10,6 +10,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.utils.zson.ZSONObject;
 
 import java.util.Date;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -46,6 +47,7 @@ public class MainAbility extends Ability {
     private static final int INVALID_FORM_ID = -1;
     private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, MainAbility.class.getName());
     private String topWidgetSlice;
+    private HiLogLabel LABEL_LOG = new HiLogLabel(HiLog.LOG_APP,0,"Ethan");
 
     @Override
     public void onStart(Intent intent) {
@@ -73,6 +75,7 @@ public class MainAbility extends Ability {
         zsonObject.put("date", date);
         zsonObject.put("time", time);
         ProviderFormInfo formInfo = new ProviderFormInfo();
+
         formInfo.setJsBindingData(new FormBindingData(zsonObject));
         return formInfo;
 
@@ -138,6 +141,12 @@ public class MainAbility extends Ability {
         /*FormControllerManager formControllerManager = FormControllerManager.getInstance(this);
         FormController formController = formControllerManager.getController(formId);
         formController.onTriggerFormEvent(formId, message);*/
+    }
+
+    @Override
+    protected void onEventNotify(Map<Long, Integer> formEvents) {
+        HiLog.debug(LABEL_LOG, "onEventNotify----->");
+        super.onEventNotify(formEvents);
     }
 
     @Override

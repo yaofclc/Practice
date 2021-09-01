@@ -50,6 +50,7 @@
             "name": "widget",
             "description": "This is a service widget",
             "colorMode": "auto",
+            "formVisibleNotify": true,
             "type": "JS",
             "supportDimensions": [
               "1*2",
